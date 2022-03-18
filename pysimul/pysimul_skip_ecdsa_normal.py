@@ -35,7 +35,7 @@ if __name__ == "__main__":
               
         # simulate "nsig" ECDSA signatures with a fault
         print(f'Generating {args.nsig} signatures')
-        list_sig = simulation_ecdsa(curve, privkey, 'normal', args.nsig, args.skip)
+        list_sig = simulation_ecdsa(curve, 'normal', args.nsig, args.skip)
 
         # DFA analysis
         print(f'DFA analysis on the signatures')
