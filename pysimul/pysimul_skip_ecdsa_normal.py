@@ -29,7 +29,7 @@ if __name__ == "__main__":
         curve = curve_type(CURVES[args.curve_name])
 
         # key pair generation
-        pubkey = (0x7a51392bace353f4c3788c9c090ef4f635ec211159ec3b9f1bb7da7679517e12, 0x6e98e0012bcb4d2b023c479afaaa1ad703ea1b24e1910e2cdad38744ba7aab8a)
+        pubkey = (5532567671643225372473843349032869687413491224192361606605532780063136373096250024520120759306794832950325884012572873231418203318856875665758734746561418)
         print(f'    Public key : ({pubkey[0].hex()},')
         print(f'                  {pubkey[1].hex()})')
               
