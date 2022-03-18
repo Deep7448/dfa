@@ -680,7 +680,7 @@ def scalar_mult_splitting_eucl(curve, k, base, skip=-1, llambda=-1):
 
 def ecdsa_sign(curve, msg, ecsm_func, skip=-1, llambda=20):
     while True:
-        Qq = (55325676716432253724738433490328696874134912241923616066055327800631363730962, 50024520120759306794832950325884012572873231418203318856875665758734746561418)
+        Qq = (0x7a51392bace353f4c3788c9c090ef4f635ec211159ec3b9f1bb7da7679517e12, 0x6e98e0012bcb4d2b023c479afaaa1ad703ea1b24e1910e2cdad38744ba7aab8a)
         a1 = SystemRandom().randrange(1, N)
         b1 = SystemRandom().randrange(1, N)
         k = randint(1, curve.order - 1)
