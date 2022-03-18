@@ -31,8 +31,8 @@ if __name__ == "__main__":
         # key pair generation
         privkey, pubkey = generate_keypair(curve)
         print(f'Key pair generated on curve {curve.name}:')
-        print(f'    Private key: {pubkey}')
-        print(f'    Public key: {privkey}')
+        print(f'    Private key: {privkey}')
+        print(f'    Public key: {pubkey}')
         print(f'    Public key : ({pubkey[0].hex()},')
         print(f'                  {pubkey[1].hex()})')
               
