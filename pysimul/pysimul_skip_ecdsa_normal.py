@@ -29,9 +29,9 @@ if __name__ == "__main__":
         curve = curve_type(CURVES[args.curve_name])
 
         # key pair generation
-        pubkey = (55325676716432253724738433490328696874134912241923616066055327800631363730962, 50024520120759306794832950325884012572873231418203318856875665758734746561418)
-        print(f'    Public key : ({pubkey[0].hex()},')
-        print(f'                  {pubkey[1].hex()})')
+        #pubkey = (55325676716432253724738433490328696874134912241923616066055327800631363730962, 50024520120759306794832950325884012572873231418203318856875665758734746561418)
+        #print(f'    Public key : ({pubkey[0].hex()},')
+        #print(f'                  {pubkey[1].hex()})')
               
         # simulate "nsig" ECDSA signatures with a fault
         print(f'Generating {args.nsig} signatures')
