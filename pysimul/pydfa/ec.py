@@ -683,11 +683,11 @@ def ecdsa_sign(curve, msg, ecsm_func, skip=-1, llambda=20):
         Qq = (0x7a51392bace353f4c3788c9c090ef4f635ec211159ec3b9f1bb7da7679517e12, 0x6e98e0012bcb4d2b023c479afaaa1ad703ea1b24e1910e2cdad38744ba7aab8a)
         a1 = SystemRandom().randrange(1, N)
         b1 = SystemRandom().randrange(1, N)
-        k = randint(1, curve.order - 1)
-        x, y = (0x7a51392bace353f4c3788c9c090ef4f635ec211159ec3b9f1bb7da7679517e12, 0x6e98e0012bcb4d2b023c479afaaa1ad703ea1b24e1910e2cdad38744ba7aab8a)
+#        k = randint(1, curve.order - 1)
+#        x, y = (0x7a51392bace353f4c3788c9c090ef4f635ec211159ec3b9f1bb7da7679517e12, 0x6e98e0012bcb4d2b023c479afaaa1ad703ea1b24e1910e2cdad38744ba7aab8a)
         r1 = fast_add(fast_multiply(G, a1), fast_multiply(Qq, b1))[0]
         r = hex(r1)
-        kinv = invmod(k, curve.order)
+#        kinv = invmod(k, curve.order)
         s1 = r * inv(b1, N)
         s = hex(s1)
         if r != 0 and s != 0:
