@@ -706,10 +706,10 @@ def ecdsa_verify(curve, pubkey, msg, sig):
 
 ## gen keypair
 
-def generate_keypair(curve):
-    privkey = randint(1, curve.order - 1)
-    pubkey = curve.ladder(privkey, curve.base)
-    return privkey, pubkey
+#def generate_keypair(curve):
+ #   privkey = randint(1, curve.order - 1)
+  #  pubkey = curve.ladder(privkey, curve.base)
+   # return privkey, pubkey
 
 
 def points_from_sig(curve, pubkey, msg, sig):
