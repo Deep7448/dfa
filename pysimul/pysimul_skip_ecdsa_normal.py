@@ -3,6 +3,7 @@
 import sys
 import argparse
 from pydfa.dfa_analysis import *
+from pydfa.ec import SECP256K1, FieldElement, PrimeField
 
 if __name__ == "__main__":
 
@@ -29,12 +30,17 @@ if __name__ == "__main__":
         curve = curve_type(CURVES[args.curve_name])
 
         # key pair generation
-        pubkey = (55325676716432253724738433490328696874134912241923616066055327800631363730962, 50024520120759306794832950325884012572873231418203318856875665758734746561418)
+        
+        x0 = FieldElement(SECP256K1['x0'], PrimeField(55325676716432253724738433490328696874134912241923616066055327800631363730962))
+        y0 = FieldElement(SECP256K1['y0'], PrimeField(50024520120759306794832950325884012572873231418203318856875665758734746561418))
+        pubkey = (x0, y0)
+        
         #print(f'    Public key : ({pubkey[0].hex()},')
         #print(f'                  {pubkey[1].hex()})')
               
         # simulate "nsig" ECDSA signatures with a fault
         print(f'Generating {args.nsig} signatures')
+        
         list_sig = simulation_ecdsa(curve, 'normal', args.nsig, args.skip)
 
         # DFA analysis
