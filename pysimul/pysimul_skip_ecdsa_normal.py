@@ -3,6 +3,7 @@
 import sys
 import argparse
 from pydfa.dfa_analysis import *
+from pydfa.ec import SECP256K1, FieldElement, PrimeField
 
 if __name__ == "__main__":
 
